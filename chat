@@ -1,0 +1,16 @@
+selflogin=input(">>>")
+        
+users = ["admn", "test1"]
+             
+
+if selflogin.startswith("login:"):
+    login = selflogin.replace("login:", "").replace("\r\n", "")
+    
+    if login in users:
+        print(f"Логин {login} занят, попробуйте другой\n")
+        
+    else:
+        print(f"Привет, {login}!\n")
+        users.append(login)            
+else:
+    print("Неправильный логин\n")
